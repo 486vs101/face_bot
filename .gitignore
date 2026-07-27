@@ -1,0 +1,22 @@
+# Build artifacts
+build/
+dist/
+__pycache__/
+*.spec
+*.pyc
+
+# User data (never commit personal photos)
+faces/*.jpg
+faces/*.jpeg
+faces/*.png
+faces/*.bmp
+faces/*.webp
+!faces/.gitkeep
+
+# Runtime logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
