@@ -62,6 +62,26 @@ python -m PyInstaller --noconfirm --onefile --name face_bot --add-data "template
 
 输出在 `dist/face_bot.exe`
 
+## 常见问题
+
+### 双击 exe 没反应 / 报错"找不到 VCRUNTIME140.dll"
+
+安装 Visual C++ Redistributable:
+
+```
+https://aka.ms/vs/17/release/vc_redist.x64.exe
+```
+
+大部分 Win10/11 已自带,少数精简版系统需要手动装。
+
+### 弹窗出现了但脚本没反应
+
+可能是模板图不适配当前屏幕分辨率。重新在自己电脑上截图替换 `templates/` 里的两个文件即可。
+
+### 文件对话框里没双击到照片
+
+看 `logs/` 里最新的 `file_dialog_match_*.png` 截图,检查脚本认为的双击位置是否在照片上。如果偏移超过 50px,联系开发者调整。
+
 ## 限制
 
 - Windows 10/11 专用
